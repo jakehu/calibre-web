@@ -9,6 +9,8 @@ docker run -d \
   -e TZ=Asia/Chongqing \
   -e DOCKER_MODS=linuxserver/mods:universal-calibre \
   -e OAUTHLIB_RELAX_TOKEN_SCOPE=1 \
+  -e LANGUAGE=zh_CN.UTF-8
+  -e LANG=zh_CN.UTF-8
   -p 8083:8083 \
   -v /volume1/docker/calibre-web:/config \
   -v /volume1/books:/books \
@@ -36,4 +38,5 @@ https://github.com/janeczku/calibre-web/blob/master/library/metadata.db
 ### 参考
 ```
 https://blog.mokeedev.com/2022/06/1124/
+https://fugary.com/?s=calibre-web
 ```
