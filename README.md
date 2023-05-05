@@ -44,4 +44,24 @@ https://fugary.com/?s=calibre-web
 ### 其他
 ```
 https://github.com/gshang2017/docker/tree/master/calibre-web
+
+docker run -d \
+  --name=calibre-web  \
+  -p 8083:8083  \
+  -p 8080:8080  \
+  -v /volume1/docker/calibre-web:/config \
+  -v /volume1/books/calibre:/library \
+  -v /volume1/books/autoaddbooks:/autoaddbooks  \
+  -e UID=0  \
+  -e GID=0  \
+  -e ENABLE_CALIBRE_SERVER_OPDS=true \
+  -e CALIBRE_SERVER_USER=admin  \
+  -e CALIBRE_SERVER_PASSWORD=xxx \
+  -e CALIBRE_SERVER_WEB_LANGUAGE=zh_CN \
+  -e CALIBRE_ASCII_FILENAME=true \
+  -e CALIBRE_WEB_LANGUAGE=zh_Hans_CN \
+  -e TZ=Asia/Shanghai \
+  --restart unless-stopped  \
+  johngong/calibre-web:0.6.20-5.44.0
+
 ```
