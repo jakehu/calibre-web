@@ -44,6 +44,7 @@ https://fugary.com/?s=calibre-web
 ### 其他
 ```
 https://github.com/gshang2017/docker/tree/master/calibre-web
+https://liyuyu.cn/post/synology-calibre-web-jour/
 
 docker run -d \
   --name=calibre-web  \
