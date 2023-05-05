@@ -13,7 +13,8 @@ docker run -d \
   -v /volume1/docker/calibre-web:/config \
   -v /volume1/books:/books \
   --restart unless-stopped \
-  jakehu/calibre-web:0.6.20
+  jakehu/calibre-web:0.6.20 \
+  bash -c "sed -i 's#https://github.com#https://ghproxy.com/https://github.com#g' /etc/s6-overlay/s6-rc.d/init-mod-universal-calibre-setup/run"
 ```
 
 ### GitHub加速
