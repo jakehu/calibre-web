@@ -40,3 +40,8 @@ https://github.com/janeczku/calibre-web/blob/master/library/metadata.db
 https://blog.mokeedev.com/2022/06/1124/
 https://fugary.com/?s=calibre-web
 ```
+
+### 其他
+```
+https://github.com/gshang2017/docker/tree/master/calibre-web
+```
