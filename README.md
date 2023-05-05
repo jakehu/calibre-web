@@ -4,8 +4,8 @@
 ```shell
 docker run -d \
   --name=calibre-web \
-  -e PUID=1000 \
-  -e PGID=1000 \
+  -e PUID=0 \
+  -e PGID=0 \
   -e TZ=Asia/Chongqing \
   -e DOCKER_MODS=linuxserver/mods:universal-calibre \
   -e OAUTHLIB_RELAX_TOKEN_SCOPE=1 \
@@ -21,4 +21,19 @@ docker run -d \
 docker exec -it calibre-web bash
 
 sed -i 's#https://github.com#https://ghproxy.com/https://github.com#g' /etc/s6-overlay/s6-rc.d/init-mod-universal-calibre-setup/run
+```
+
+### 空数据库
+```
+https://github.com/janeczku/calibre-web/blob/master/library/metadata.db
+```
+
+### 数据库位置
+```
+/books/metadata.db
+```
+
+### 参考
+```
+https://blog.mokeedev.com/2022/06/1124/
 ```
